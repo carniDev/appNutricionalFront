@@ -1,0 +1,42 @@
+<div class="container mt-5">
+    <div class="text-center mb-4">
+        <h1>Buscador de alimentos</h1>
+    </div>
+    <div class="mb-4">
+        <input class="form-control" [(ngModel)]="nombre" type="text" name="Nombre" id="nombre" placeholder="introduce el nombre" />
+        <button class="btn btn-primary mt-2" (click)="buscar()">Buscar</button>
+        <button class="btn btn-primary mt-2" (click)="reset()">Reset</button>
+    </div>
+    <div class="table" *ngIf="informacion!=null">
+        <table class="table table-bordered table-hover align-middle">
+            <thead>
+                <tr>
+                    <th>codigo</th>
+                    <th>Nombre</th>
+                    <th>Kcal</th>
+                    <th>Hidratos de Carbono</th>
+                    <th>Proteina</th>
+                    <th>Grasas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let info of informacion" (click)="seleccionarInfo(info)">
+                    <td>{{info.codigoAlimento}}</td>
+                    <td>{{ info.nombre }}</td>
+                    <td>{{ info.kcal }}</td>
+                    <td>{{ info.hidratosCarbono }}</td>
+                    <td>{{ info.proteinas}}</td>
+                    <td>{{ info.grasas}}</td>
+
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+    <div class="mt-4">
+        <button class="btn btn-success" (click)="addInfo()">Añadir</button>
+        <button class="btn btn-danger">Cancelar</button>
+    </div>
+
+</div>

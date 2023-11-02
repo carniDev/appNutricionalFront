@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="header">
+        <h1>Tipo de comida</h1>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Kcal</th>
+                <th>Hidratos</th>
+                <th>Proteinas</th>
+                <th>Grasas</th>
+            </tr>
+        </thead>
+        <tbody >
+            <tr *ngFor="let alimento of informacion.alimentos">
+                <td>{{alimento.idAlimento}}</td>
+                <td>{{alimento.informacion.kcal}}</td>
+                <td>{{alimento.informacion.hidratosCarbono}}</td>
+                <td>{{alimento.informacion.proteinas}}</td>
+                <td>{{alimento.informacion.grasas}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <div class="buttons">
+        <button class="btn-aceptar">Aceptar</button>
+        <button class="btn-editar">Editar</button>
+        <button class="btn-borrar">Borrar</button>
+    </div>
+</div>

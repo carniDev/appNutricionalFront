@@ -1,0 +1,76 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.sidebar {
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #555;
+}
+
+
+.main-content {
+  margin-left: 220px; 
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.charts {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: .25rem;
+}
+
+.tablaComidas {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #007BFF;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+
+.sidebar .btn {
+  margin: 20px 0;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.sidebar .btn:hover {
+  background-color: #0056b3;
+}
