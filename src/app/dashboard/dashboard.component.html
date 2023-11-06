@@ -12,10 +12,14 @@
             <h1 class="my-4">Nombre de tu App</h1>
         </header>
         <main>
-            <section class="charts bg-white rounded p-4 mb-4">
-                <div class="container-fluid">
-                    <app-charts [proteinData]="informacionDiaria.proteinaDiaria" [carbData]="informacionDiaria.hidratosCarbonoDiarios" [fatData]="informacionDiaria.grasaDiaria"></app-charts>
-                </div>
+            <section *ngIf="informacionDiaria$" class="charts bg-white rounded p-4 mb-4">
+                <div  class="container-fluid">
+                    <app-charts *ngIf="informacionDiaria$ | async as informacionDiaria" 
+                    [proteinData]="informacionDiaria.proteinaDiaria" 
+                    [carbData]="informacionDiaria.hidratosCarbonoDiarios" 
+                    [fatData]="informacionDiaria.grasaDiaria">
+        </app-charts>
+                        </div>
             </section>
             <section class="meal-list bg-white rounded p-4">
                 <table class="table table-bordered tablaComidas">
@@ -29,7 +33,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let comida of comidas">
+                        <tr *ngFor="let comida of comidas" (click)="verDetalleComida(comida)">
                             <td>{{comida.tipoComida}}</td>
                             <td>{{comida.kcal}}</td>
                             <td>{{comida.hidratosCarbono}}</td>

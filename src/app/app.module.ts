@@ -15,6 +15,7 @@ import { BuscarAlimentoComponent } from './buscar-alimento/buscar-alimento.compo
 import { ComidaComponent } from './comida/comida.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GenerarComidaComponent } from './generar-comida/generar-comida.component';
+import { EditarComidaComponent } from './editar-comida/editar-comida.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { GenerarComidaComponent } from './generar-comida/generar-comida.componen
     ChartsComponent,
     BuscarAlimentoComponent,
     ComidaComponent,
-    GenerarComidaComponent
+    GenerarComidaComponent,
+    EditarComidaComponent
   ],
   imports: [
     BrowserModule,

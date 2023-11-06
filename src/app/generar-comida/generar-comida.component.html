@@ -2,15 +2,17 @@
     <h2 class="text-center">Comida para registrar</h2>
     <form>
         <div class="form-group">
-            <label for="tipoComida">Tipo de Comida</label>
-            <select class="form-control" id="tipoComida">
-                <option [defaultSelected]="">Seleccione una comida</option>
-                <option>Desayuno</option>
-                <option>Almuerzo</option>
-                <option>Comida</option>
-                <option>Merienda</option>
-                <option>Cena</option>
-            </select>
+            <div class="form-group">
+                <label for="tipoComida">Tipo de Comida</label>
+                <select class="form-control" id="tipoComida" [(ngModel)]="tipoComida" name="tipoComida">
+                    <option value =''>Seleccione una comida</option>
+                    <option value ='DESAYUNO'>Desayuno</option>
+                    <option value ='ALMUERZO'>ALMUERZO</option>
+                    <option value ='COMIDA'>COMIDA</option>
+                    <option value ='MERIENDA'>Merienda</option>
+                    <option value ='CENA'>Cena</option>
+                </select>
+            </div>
         </div>
 
         <div class="table" *ngIf="informacionAlimento!=null">

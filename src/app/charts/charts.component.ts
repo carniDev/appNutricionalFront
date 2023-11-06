@@ -19,6 +19,7 @@ export class ChartsComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
+    console.log(this.proteinData)
     
     new Chart('nutrientChart', {
       type: 'doughnut',

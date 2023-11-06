@@ -7,17 +7,18 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { BuscarAlimentoComponent } from './buscar-alimento/buscar-alimento.component';
 import { ComidaComponent } from './comida/comida.component';
 import { GenerarComidaComponent } from './generar-comida/generar-comida.component';
+import { EditarComidaComponent } from './editar-comida/editar-comida.component';
 
 const routes: Routes = [
 
 {path:'', component:HomeComponent},
-
 {path:'login', component:LoginComponent},
 {path:'registro', component:RegistroComponent},
 {path:'dashboard', component:DashboardComponent},
 {path:'buscar',component:BuscarAlimentoComponent},
 {path:'comida',component:ComidaComponent},
-{path:'generar-comida', component:GenerarComidaComponent}
+{path:'generar-comida', component:GenerarComidaComponent},
+{path:'editar-comida',component:EditarComidaComponent}
 
 
 ];
